@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Shopping Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            MyShop
+        </div>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+                onkeyup="searchProducts()"
+            >
+            <button>Search</button>
+        </div>
+
+        <div class="cart">
+            🛒 Cart:
+            <span id="cartCount">0</span>
+        </div>
+
+    </header>
+
+
+    <!-- Categories -->
+    <nav class="categories">
+
+        <button onclick="filterProducts('all')">
+            All
+        </button>
+
+        <button onclick="filterProducts('electronics')">
+            Electronics
+        </button>
+
+        <button onclick="filterProducts('fashion')">
+            Fashion
+        </button>
+
+        <button onclick="filterProducts('home')">
+            Home
+        </button>
+
+    </nav>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <h1>Welcome to MyShop</h1>
+
+        <p class="subtitle">
+            Great products at great prices
+        </p>
+
+
+        <!-- Products -->
+        <div class="product-container" id="productContainer">
+
+
+            <!-- Product 1 -->
+            <div class="product-card" data-category="electronics">
+
+                <img
+                    src="images/laptop.jpg"
+                    alt="Laptop"
+                >
+
+                <h2>HP Laptop</h2>
+
+                <p>
+                    Powerful laptop for work and study.
+                </p>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <h3>₹55,999</h3>
+
+                <button
+                    onclick="addToCart('HP Laptop', 55999)"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- Product 2 -->
+            <div class="product-card" data-category="electronics">
+
+                <img
+                    src="images/mobile.jpg"
+                    alt="Mobile Phone"
+                >
+
+                <h2>Smartphone</h2>
+
+                <p>
+                    Fast smartphone with a great camera.
+                </p>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐☆
+                </div>
+
+                <h3>₹24,999</h3>
+
+                <button
+                    onclick="addToCart('Smartphone', 24999)"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- Product 3 -->
+            <div class="product-card" data-category="electronics">
+
+                <img
+                    src="images/headphones.jpg"
+                    alt="Headphones"
+                >
+
+                <h2>Wireless Headphones</h2>
+
+                <p>
+                    Comfortable headphones with clear sound.
+                </p>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <h3>₹2,499</h3>
+
+                <button
+                    onclick="addToCart('Wireless Headphones', 2499)"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- Product 4 -->
+            <div class="product-card" data-category="fashion">
+
+                <img
+                    src="images/shoes.jpg"
+                    alt="Shoes"
+                >
+
+                <h2>Running Shoes</h2>
+
+                <p>
+                    Comfortable shoes for running and walking.
+                </p>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐☆
+                </div>
+
+                <h3>₹1,999</h3>
+
+                <button
+                    onclick="addToCart('Running Shoes', 1999)"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- Product 5 -->
+            <div class="product-card" data-category="fashion">
+
+                <img
+                    src="images/watch.jpg"
+                    alt="Watch"
+                >
+
+                <h2>Smart Watch</h2>
+
+                <p>
+                    Track your fitness and daily activities.
+                </p>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <h3>₹3,999</h3>
+
+                <button
+                    onclick="addToCart('Smart Watch', 3999)"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- Product 6 -->
+            <div class="product-card" data-category="home">
+
+                <img
+                    src="images/speaker.jpg"
+                    alt="Speaker"
+                >
+
+                <h2>Bluetooth Speaker</h2>
+
+                <p>
+                    Powerful sound for your home.
+                </p>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐☆
+                </div>
+
+                <h3>₹1,499</h3>
+
+                <button
+                    onclick="addToCart('Bluetooth Speaker', 1499)"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 MyShop. All rights reserved.
+        </p>
+
+        <p>
+            About | Contact | Privacy Policy
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
